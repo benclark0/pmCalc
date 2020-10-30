@@ -72,6 +72,8 @@ def stock_em_pm_data(stock_symbol):
         print('The Potential Move is %s' % potential_move)
         upper_potential_move = stock_price + potential_move
         lower_potential_move = stock_price - potential_move
+        upper_potential_move = round(upper_potential_move, 2)
+        lower_potential_move = round(lower_potential_move, 2)
         print('The upper possible move is %s' % upper_potential_move)
         print('The lower possible move is %s' % lower_potential_move)
     except IndexError or LookupError:
